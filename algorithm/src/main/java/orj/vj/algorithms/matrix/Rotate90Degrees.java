@@ -23,10 +23,10 @@ public class Rotate90Degrees {
 							   {'m','n','o','p'}};
 	
 	public static void main(String[] args) {
-		printMatrix(matrix);
+		MatrixUtils.printMatrix(matrix);
 		char[][] rotated90  = rotateMatrix(matrix, 4);
 		System.out.println("---------------- rotated --------------");
-		printMatrix(rotated90);
+		MatrixUtils.printMatrix(rotated90);
 		
 	}
 
@@ -54,19 +54,4 @@ public class Rotate90Degrees {
 		 }
 		return matrix;
 	}
-
-	private static void printMatrix(char[][] matrix) {
-		int rows = 0;
-		while( rows < matrix.length ){
-			int column = 0;
-			while( column < matrix[rows].length){
-				System.out.print(matrix[rows][column]);
-				column++;
-			}
-				rows ++;
-				System.out.println();
-		}
-		
-	}
-	
 }
