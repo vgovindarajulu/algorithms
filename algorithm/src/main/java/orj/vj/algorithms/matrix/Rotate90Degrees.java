@@ -21,13 +21,18 @@ public class Rotate90Degrees {
 							   {'e','f','g','h'},
 							   {'i','j','k','l'},
 							   {'m','n','o','p'}};
+	static char[][] matrix1 = { {'a','b','c','d','e'},
+							   {'f','g','h','i','j'},
+							   {'j','k','l','m', 'n'},
+							   {'o','p','q','r', 's'},
+							   {'t','u','v','w', 'x'}};
 	
 	public static void main(String[] args) {
-		MatrixUtils.printMatrix(matrix);
-		char[][] rotated90  = rotateMatrix(matrix, 4);
+
+		MatrixUtils.printMatrix(matrix1);
+		char[][] rotated90  = rotateMatrix(matrix1, 5);
 		System.out.println("---------------- rotated --------------");
 		MatrixUtils.printMatrix(rotated90);
-		
 	}
 
 	private static char[][] rotateMatrix(char[][] matrix, int n) {

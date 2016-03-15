@@ -7,6 +7,11 @@ public class OddEvenLinkedList {
 	    evenHead = evenTail = head.next;
 
 	    while (evenTail != null && evenTail.next != null) {
+	    	if(evenTail.val % 2 == 0){
+	    		evenTail.next = evenTail.next.next;
+	    	}else{
+	    		oddTail.next = evenTail.next;	
+	    	}
 	        // move to the odd list tail.
 	        oddTail.next = evenTail.next;
 	        evenTail.next = evenTail.next.next;
